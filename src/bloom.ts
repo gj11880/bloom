@@ -13,7 +13,6 @@ export class BloomFilter {
     public hashSlice: number = 8;
 
     constructor(size: number, numberOfHashes = 5, secret: string = undefined) {
-        console.log("In the TS!")
         this.size = size;
         this.numberOfHashes = numberOfHashes;
         this.hashFunctions = ["sha1", "sha256", "md5", "sha512", "whirlpool"];
