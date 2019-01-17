@@ -1,0 +1,26 @@
+{
+  "name": "bloom",
+  "version": "0.1.0",
+  "description": "A variety of Bloom filter implementations.",
+  "main": "src/bloom.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "tape": "^4.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "tape tests/test_bloom.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toastdriven/bloom.git"
+  },
+  "author": "Daniel Lindsley",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/toastdriven/bloom/issues"
+  },
+  "homepage": "https://github.com/toastdriven/bloom#readme"
+}
