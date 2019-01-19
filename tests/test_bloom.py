@@ -13,6 +13,16 @@ class BloomFilterTestCase(unittest.TestCase):
         bf.add("Hello")
         self.assertEqual(len([1 for bit in bf._bits if bit]), 5)
 
+    def test_len(self):
+        bf = bloom.BloomFilter(100)
+        self.assertEqual(len(bf), 0)
+        bf.add("Hello")
+        self.assertEqual(len(bf), 1)
+        bf.add("world")
+        self.assertEqual(len(bf), 2)
+        bf.add("HELLO, YES, THIS IS DOG")
+        self.assertEqual(len(bf), 3)
+
     def test_contains(self):
         bf = bloom.BloomFilter(100)
         bf.add("Hello")

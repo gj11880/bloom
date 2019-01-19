@@ -21,6 +21,9 @@ class BloomFilter(object):
         self._num_hashes = number_of_hashes
         self.reset()
 
+    def __len__(self):
+        return self._count
+
     def reset(self):
         self._bits = [0 for i in range(self._size)]
 
@@ -54,6 +57,8 @@ class BloomFilter(object):
         for offset in offsets:
             actual_offset = offset % self._size
             self._bits[actual_offset] = 1
+
+        self._count += 1
 
     def __contains__(self, value):
         offsets = self._get_offsets(value)
